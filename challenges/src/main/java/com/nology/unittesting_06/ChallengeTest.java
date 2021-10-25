@@ -1,23 +1,21 @@
 package com.nology.unittesting_06;
 
-import com.nology.unittesting_06.Challenge;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.After;
+import org.junit.Before;
 
-import java.util.ArrayList;
-import java.util.List;
+import static org.junit.Assert.*;
 
 public class ChallengeTest {
 
     private Challenge challenge;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() throws Exception {
         this.challenge = new Challenge();
     }
 
-    @AfterEach
-    void tearDown() {
+    @After
+    public void tearDown() throws Exception {
     }
 
     // -------------- Foundation  --------------
@@ -25,6 +23,7 @@ public class ChallengeTest {
     // 1 - Write a positive test below
     public void getWordCount_ValidSentence_ReturnsCorrectCount() {
         // ... Write your code here
+
     }
 
     // 2 - Write a positive test below

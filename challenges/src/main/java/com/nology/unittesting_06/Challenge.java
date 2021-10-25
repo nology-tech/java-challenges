@@ -1,7 +1,7 @@
 package com.nology.unittesting_06;
 
 import java.util.*;
-
+// written with junit 4 syntax
 public class Challenge {
 
     // -------------- Foundation  --------------
@@ -43,7 +43,7 @@ public class Challenge {
     }
 
     /**
-     * Final Challenge is writting a test for the User.java setScore function.. Checkout ChallengeTest.java
+     * Final Challenge is writing a test for the User.java setScore function.. Checkout ChallengeTest.java
      * and User.java to understand more :)
      * */
 
