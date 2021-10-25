@@ -1,26 +1,24 @@
 package com.nology.unittesting_06;
 
-import com.nology.unittesting_06.Challenge;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 public class SolutionTest {
 
     private Challenge challenge;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() throws Exception {
         this.challenge = new Challenge();
     }
 
-    @AfterEach
-    void tearDown() {
+    @After
+    public void tearDown() throws Exception {
     }
 
     // -------------- Foundation  --------------
@@ -36,7 +34,7 @@ public class SolutionTest {
     @Test
     public void isPalindrome_ValidPalindrome_ReturnsTrue() {
         boolean result = this.challenge.isPalindrome("Anna");
-        assertEquals(true, result);
+        assertTrue(result);
         result = this.challenge.isPalindrome("amber");
         assertFalse(result);
     }
@@ -58,26 +56,17 @@ public class SolutionTest {
 
     @Test
     public void setScore_ValidUser_UpdatesUserScore() {
-        // Arrange
         User updatedUser = new User("johndoe");
-
-        // Act
         updatedUser.setScore(10);
-
-        // Assert
         assertEquals(10, updatedUser.getScore());
     }
 
     @Test
     public void setScore_BadScore_ThrowsIllegalArgumentException() {
-        // Arrange
         UserRepository repo = new UserRepository();
         User updatedUser = new User("johndoe");
-
-        // Act
         updatedUser.setScore(-1);
-
-        // Assert
         assertThrows(IllegalArgumentException.class, () -> repo.updateScore(updatedUser));
     }
-}
+
+    }
