@@ -196,7 +196,7 @@ class ChallengeTest {
     @Test
     void printMegaBytesAndKiloBytes_InvalidInputs_ReturnsInvalidMessage() {
         String result = challenge.printMegaBytesAndKiloBytes(-2220);
-        assertEquals("Invalid Value", result);
+        assertEquals("Invalid value", result);
     }
 
     // Testing calculateReturn
